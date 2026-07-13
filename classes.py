@@ -1,6 +1,6 @@
-# Class is a blueprint for you objects.
+# Class is a blueprint for your objects.
 # First letter of class should be capital
-# It can contain Attributes(variables define inside the class) and Methods(functions defined inside the class).
+# It can contain Attributes(variables defined inside the class) and Methods(functions defined inside the class).
 
 
 class Remover:
@@ -20,7 +20,8 @@ class Remover:
 
         return unique_data
 
-    print("I am initialized inside the class Remover")
+    def __str__(self):
+        return "I am initialized inside the class Remover"
 
 
 obj1 = Remover([10, "apple", 10, "banana", "apple", 20.5, 20.5])
