@@ -30,3 +30,5 @@ obj2 = Remover([1, 2, 2, 3, 4, 4, 5])
 # print(Remover([1, 2, 2, 3, 4, 4, 5]).duplicates_remover())
 print(obj1.duplicates_remover())
 print(obj2.duplicates_remover())
+
+
