@@ -20,5 +20,7 @@ identity.display()
 # Class attribute - A normal variable created inside a class is a class attribute and that's it.
 # An Instance attribute - A attribute created using an instance like self.name, self.age etc. It is known as instance attribute.
 
-
-
+# Types of Methods
+# Instance method - A method that is defined inside a class and is called on an instance of the class.
+# Class method - A method that is defined inside a class and is called on the class itself.
+# Static method - A method that is defined inside a class but is not bound to the class or the instance.
