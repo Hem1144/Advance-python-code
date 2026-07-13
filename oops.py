@@ -16,5 +16,9 @@ identity = Student(7, "Joy", 20)
 identity.display()
 
 
+# Types of Attributes
+# Class attribute - A normal variable created inside a class is a class attribute and that's it.
+# An Instance attribute - A attribute created using an instance like self.name, self.age etc. It is known as instance attribute.
+
 
 
