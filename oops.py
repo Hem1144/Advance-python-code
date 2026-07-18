@@ -126,3 +126,138 @@ from abc import abstractmethod, ABC
 #     return f"Hello {user.name}, age {user.age}"
 #
 # print(greet(User("Alice", 30)))
+
+
+# Multiple Inheritance
+
+# class Father:
+#     def skills(self):
+#         print("Coding and Safety")
+#
+# class Mother:
+#     def skills(self):
+#         print("Cooking and Cleaning")
+#
+# class Child(Father, Mother):
+#     def skills(self):
+#         print("Playing, Cooking and Learning")
+#
+# c1 = Child()
+# c1.skills()
+
+
+# Polymorphism and its types
+# 1. Method Overloading === a class has multiple methods with the same name but different parameters.
+# 2. Method Overriding  === a child class overrides a method of the parent class.
+
+# 1. Method Overloading
+
+# class Bird:
+#     def sound(self):
+#         print("Bird can sing a beautiful song")
+#
+# class Nightingale(Bird):
+#     def sound(self):
+#         print("Trill & Warble")
+#
+# bird = Bird()
+# bird.sound()
+#
+# nightingale = Nightingale()
+# nightingale.sound()
+
+# 2 Method Overriding
+
+# class Animal:
+#     def show(self):
+#         print("Animal is showing")
+#
+# class Human(Animal):
+#     def show(self):
+#         print("Human is showing")
+#
+# human = Human()
+# human.show()
+
+# Duck Typing
+
+# class Duck:
+#     def eat(self):
+#         print("eat")
+#
+# class Dog(Duck):
+#     def eat(self):
+#         print("eat")
+#
+# class Cat(Duck):
+#     def eat(self):
+#         print("eat")
+#
+# duck = Duck()
+# cat = Cat()
+# dog = Dog()
+# duck.eat()
+# cat.eat()
+# dog.eat()
+
+
+# Encapsulation
+# It is the process of wrapping data and methods that operate on that data within a single unit, such as a class. It restricts direct access to some of an object's components, which can prevent the accidental modification of data. In Python, encapsulation is implemented using private and protected access modifiers.
+
+# Access Modifier
+# 1. Public: Accessible from anywhere.
+# 2. Protected: Accessible within the class and its subclasses. It uses one underscore to represent protected method.
+# 3. Private: Accessible only within the class. This is done by using two underscores before the method name.
+
+# Examples
+
+from abc import ABC, abstractmethod
+import math
+
+
+# 1. The Abstract Base Class (The Interface/Contract)
+class Shape(ABC):
+
+    @abstractmethod
+    def area(self) -> float:
+        """
+        Calculate and return the area of the shape.
+        Every concrete subclass must implement this method.
+        """
+        pass
+
+
+# 2. Concrete Subclass: Square
+class Square(Shape):
+    def __init__(self, side: float):
+        self.side = side
+
+    def area(self) -> float:
+        # Area of a square: side * side
+        return self.side ** 2
+
+
+# 3. Concrete Subclass: Circle
+class Circle(Shape):
+    def __init__(self, radius: float):
+        self.radius = radius
+
+    def area(self) -> float:
+        # Area of a circle: pi * r^2
+        return math.pi * (self.radius ** 2)
+
+# def print_shape_areas(shapes: list[Shape]) -> None:
+#     print(shapes)
+#     for shape in shapes:
+#         print(type(shape).__name__)
+#         print(shape.area())
+#         # The type checker and runtime are guaranteed that .area() exists
+#         print(f"The area of the {type(shape).__name__} is: {shape.area():.2f}")
+#
+# # Instantiate your concrete shapes
+# shapes_list: list[Shape] = [
+#     Square(side=4.0),
+#     Circle(radius=3.0)
+# ]
+#
+# print_shape_areas(shapes_list)
