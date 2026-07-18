@@ -211,40 +211,40 @@ from abc import abstractmethod, ABC
 
 # Examples
 
-from abc import ABC, abstractmethod
-import math
+# from abc import ABC, abstractmethod
+# import math
+#
+#
+# # 1. The Abstract Base Class (The Interface/Contract)
+# class Shape(ABC):
+#
+#     @abstractmethod
+#     def area(self) -> float:
+#         """
+#         Calculate and return the area of the shape.
+#         Every concrete subclass must implement this method.
+#         """
+#         pass
+#
+#
+# # 2. Concrete Subclass: Square
+# class Square(Shape):
+#     def __init__(self, side: float):
+#         self.side = side
+#
+#     def area(self) -> float:
+#         # Area of a square: side * side
+#         return self.side ** 2
+#
+# # 3. Concrete Subclass: Circle
+# class Circle(Shape):
+#     def __init__(self, radius: float):
+#         self.radius = radius
+#
+#     def area(self) -> float:
+#         # Area of a circle: pi * r^2
+#         return math.pi * (self.radius ** 2)
 
-
-# 1. The Abstract Base Class (The Interface/Contract)
-class Shape(ABC):
-
-    @abstractmethod
-    def area(self) -> float:
-        """
-        Calculate and return the area of the shape.
-        Every concrete subclass must implement this method.
-        """
-        pass
-
-
-# 2. Concrete Subclass: Square
-class Square(Shape):
-    def __init__(self, side: float):
-        self.side = side
-
-    def area(self) -> float:
-        # Area of a square: side * side
-        return self.side ** 2
-
-
-# 3. Concrete Subclass: Circle
-class Circle(Shape):
-    def __init__(self, radius: float):
-        self.radius = radius
-
-    def area(self) -> float:
-        # Area of a circle: pi * r^2
-        return math.pi * (self.radius ** 2)
 
 # def print_shape_areas(shapes: list[Shape]) -> None:
 #     print(shapes)
@@ -261,3 +261,50 @@ class Circle(Shape):
 # ]
 #
 # print_shape_areas(shapes_list)
+
+
+# Typing in Python as like Typescripts in JS
+# print(bytes("Hello, World!", encoding="utf-8"))
+
+# class Animal:
+#     @staticmethod
+#     def show():
+#         print("I am showing the animal")
+#
+# class Human:
+#     @staticmethod
+#     def show():
+#         print("I am showing the human")
+#
+# animal = Animal()
+# human = Human()
+#
+# animal.show()
+# human.show()
+
+# Second way using the self keyword
+
+# class Animal:
+#     def show(self):
+#         print("I am showing the animal")
+#
+# class Human:
+#     def show(self):
+#         print("I am showing the human")
+#
+# animal = Animal()
+# human = Human()
+# animal.show()
+# human.show()
+
+
+# from typing import NamedTuple
+#
+# class User(NamedTuple):
+#     name: str
+#     score: int
+#
+# def greet (user : User) -> str:
+#     return f"Hello, {user.name}! You scored {user.score} points!"
+#
+# print(greet(User(name="Sanjay", score=85)))
