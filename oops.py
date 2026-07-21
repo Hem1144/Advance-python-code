@@ -310,8 +310,8 @@ from abc import abstractmethod, ABC
 # print(greet(User(name="Sanjay", score=85)))
 
 
-from abc import ABC, abstractmethod
-from math import pi
+# from abc import ABC, abstractmethod
+# from math import pi
 
 # class Circle(ABC):
 #     def __init__(self, radius):
@@ -329,3 +329,28 @@ from math import pi
 # area = Circle(radius=5)
 # area.area()
 # area.perimeter()
+
+
+
+from math import pi
+
+# Remove (ABC), make it a normal concrete class
+class Circle:
+    def __init__(self, radius: float):
+        self.radius = radius
+
+    # Remove @abstractmethod, provide standard implementations
+    def area(self) -> float:
+        calculated_area = pi * self.radius ** 2
+        print(f'The area of the circle is: {calculated_area:.2f}')
+        return calculated_area
+
+    def perimeter(self) -> float:
+        calculated_perimeter = 2 * pi * self.radius
+        print(f'The perimeter of the circle is: {calculated_perimeter:.2f}')
+        return calculated_perimeter
+
+# This runs perfectly!
+circle_instance = Circle(radius=5)
+circle_instance.area()
+circle_instance.perimeter()
