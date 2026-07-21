@@ -308,3 +308,24 @@ from abc import abstractmethod, ABC
 #     return f"Hello, {user.name}! You scored {user.score} points!"
 #
 # print(greet(User(name="Sanjay", score=85)))
+
+
+from abc import ABC, abstractmethod
+from math import pi
+
+# class Circle(ABC):
+#     def __init__(self, radius):
+#         self.radius = radius
+#
+#     @abstractmethod
+#     def area(self):
+#         print(f'The area of the circle is: {pi * self.radius ** 2}')
+#
+#     @abstractmethod
+#     def perimeter(self):
+#         print(f'The perimeter of the circle is: {2 * 3.14 * self.radius}')
+#
+#
+# area = Circle(radius=5)
+# area.area()
+# area.perimeter()
